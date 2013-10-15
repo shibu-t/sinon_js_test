@@ -2,17 +2,19 @@
     var expect = require('expect.js');
 }
 
-describe('add', function(){
-    it('should be two', function(){
-        var calc = new Calc();
-        var result = calc.add(1, 1);
-        expect(result).to.be(2);
-    });
+describe('Calc', function(){
+    describe('.add', function(){
+        it('should be two', function(){
+            var calc = new Calc();
+            var result = calc.add(1, 1);
+            expect(result).to.be(2);
+        });
 
-    it('should not be four', function(){
-        var calc = new Calc();
-        var result = calc.add(1, 2);
-        expect(result).not.to.be(4);
+        it('should not be four', function(){
+            var calc = new Calc();
+            var result = calc.add(1, 2);
+            expect(result).not.to.be(4);
+        });
     });
 });
 
