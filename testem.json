@@ -2,7 +2,8 @@
     "framework": "mocha",
     "src_files": [
         "lib/*.js",
-        "test/*.test.js"
+        "test/*.test.js",
+        "node_modules/expect.js/expect.js"
     ],
     "launchers": {
         "Mocha": {

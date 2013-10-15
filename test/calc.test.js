@@ -1,14 +1,29 @@
-﻿var expect = require('expect.js');
-var calc   = require('../lib/calc.js');
+﻿if (typeof window == 'undefined' || typeof window.expect == 'undefined') {
+    var expect = require('expect.js');
+}
 
 describe('add', function(){
-    it('1と1を与えたら2を返す', function(){
+    it('should be two', function(){
+        var calc = new Calc();
         var result = calc.add(1, 1);
         expect(result).to.be(2);
     });
-    // テストケースを追記
-    it('1と2を与えたら4にならない', function(){
+
+    it('should not be four', function(){
+        var calc = new Calc();
         var result = calc.add(1, 2);
         expect(result).not.to.be(4);
     });
 });
+
+
+// describe('add', function(){
+//     it("calls the original function", function () {
+//         var callback = sinon.spy();
+//         var proxy = once(callback);
+// 
+//         proxy();
+// 
+//         assert(callback.called);
+//     });
+// });
